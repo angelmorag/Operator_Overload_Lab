@@ -1,9 +1,8 @@
 //
 // Created by angel on 3/2/2026.
 //
-#include "BankAccount.h"
+#include "BANKACCOUNT.h"
 #include <iostream>
-#include <cstring>
 using namespace std;
 
 // Constructor
@@ -85,7 +84,7 @@ BankAccount BankAccount::createAccountFromInput() {
 
     cout << "Enter account number: ";
     cin >> id;
-    cin.ignore();
+    cin.ignore(1000, '\n');
     cout << "Enter holder name: ";
     getline(cin, name);
     cout << "Enter balance: ";

@@ -1,4 +1,4 @@
-#include "BankAccount.h"
+#include "BankAccount.cpp"
 #include <iostream>
 using namespace std;
 
@@ -16,19 +16,33 @@ int main() {
             continue;
         }
 
-        if (choice == 1) {
-            double amount;
-            cout << "Enter deposit amount: ";
-            cin >> amount;
-            myAcc += amount;
-        } else if (choice == 2) {
-            double amount;
-            cout << "Enter withdrawal amount: ";
-            cin >> amount;
-            myAcc -= amount;
-        } else if (choice == 3) {
-            BankAccount::printAccount(myAcc);
+        switch (choice) {
+            case 1: {
+                double amount;
+                cout << "Enter deposit amount: ";
+                cin >> amount;
+                myAcc += amount;
+                break;
+            }
+            case 2: {
+                double amount;
+                cout << "Enter withdrawal amount: ";
+                cin >> amount;
+                myAcc -= amount;
+                break;
+            }
+            case 3: {
+                BankAccount::printAccount(myAcc);
+                break;
+            }
+            case 4: {
+                cout << "Exiting now, goodbye!\n";
+                break;
+            }
+            default: {
+                cout << "Invalid input, please choose a number (1-4).\n";
+                break;
+            }
         }
     }
-    return 0;
 }
