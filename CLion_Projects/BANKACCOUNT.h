@@ -1,8 +1,0 @@
-//
-// Created by angel on 3/2/2026.
-//
-
-#ifndef CLION_PROJECTS_BANKACCOUNT_H
-#define CLION_PROJECTS_BANKACCOUNT_H
-
-#endif //CLION_PROJECTS_BANKACCOUNT_H
